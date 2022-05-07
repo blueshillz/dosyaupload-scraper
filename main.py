@@ -26,7 +26,7 @@ def main(tlets,savefile):
 if __name__=='__main__':
     print(colorama.Fore.RED,'Blueshillz dosyaupload scraper\nGithub : https://github.com/blueshillz/dosyaupload-scraper')
     tlets = input(f'{colorama.Fore.CYAN}Enter 2 letters of an exist link\n')
-    savefile = input(f'{colorama.Fore.CYAN}Do you want to save the hits to a file? (y/n)\n')
+    savefile = input(f'{colorama.Fore.CYAN}Do you want to save hits to a file? (y/n)\n')
     if savefile == 'y':
         print(colorama.Fore.GREEN,f'Hits will be saved to {getcwd()}\\hits.txt')
     main(tlets,savefile)

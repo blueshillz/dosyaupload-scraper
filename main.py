@@ -11,9 +11,8 @@ def randstr():
 
 def main(tlets,savefile):
     while True:
-        session = requests.Session()
         linkz = f'https://dosyaupload.com/{tlets}{randstr()}'
-        resp = session.get(linkz)
+        resp = requests.get(linkz)
         if resp.status_code == 200:
             sup = BeautifulSoup(resp.content, "html.parser")
             file_name = sup.find('div',{'class':'heading-1'}).get_text(strip=True).rsplit('indir')[0]
